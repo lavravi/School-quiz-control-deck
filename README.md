@@ -1,6 +1,3 @@
-Copy everything inside the box below and paste it into your repository’s `README.md` file.
-
-````markdown
 # 🏆 QRIOUS Quiz Control Centre
 
 ### Viraj International School | Inter-House Quiz Competition
