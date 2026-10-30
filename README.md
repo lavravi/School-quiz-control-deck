@@ -1,102 +1,430 @@
-QRIOUS Quiz Control Centre
+Copy everything inside the box below and paste it into your repository’s `README.md` file.
 
-A browser-based control centre for Viraj International School's inter-house quiz competition. It brings questions, a countdown timer and team scores together on one screen for the Quiz Master and audience.
+````markdown
+# 🏆 QRIOUS Quiz Control Centre
 
-The four default houses are Agni, Jal, Prithvi and Vayu. The initial question bank contains editable placeholders for seven rounds.
+### Viraj International School | Inter-House Quiz Competition
 
-Features
+A browser-based quiz management application that brings **questions, countdown timers, answers and house scores** together in one place.
 
-Show a question and reveal its answer when the Quiz Master is ready.
+Designed for school quiz competitions, QRIOUS helps the Quiz Master conduct each round smoothly while keeping scores visible to the audience.
 
-Start, pause and reset a countdown timer; play a sound when time is up.
+> **Ready to use offline:** Download the HTML file and open it in a modern web browser. No installation, server or database is required.
 
-Record scores for each house, display current-round and overall totals, and undo the last score change.
+---
 
-Show a round-by-round score table and final results.
+## 📋 Table of Contents
 
-Move to the previous or next question, or jump to the next round.
+- [Overview](#-overview)
+- [Features](#-features)
+- [Default Houses](#-default-houses)
+- [Getting Started](#-getting-started)
+- [Preparing the Quiz](#-preparing-the-quiz)
+- [Conducting the Competition](#-conducting-the-competition)
+- [Scoring Guide](#-scoring-guide)
+- [Audience and Quiz Master Views](#-audience-and-quiz-master-views)
+- [Manual Buzzer](#-manual-buzzer)
+- [Saving and Backup](#-saving-and-backup)
+- [Deploying with GitHub Pages](#-deploying-with-github-pages)
+- [Troubleshooting](#-troubleshooting)
+- [Technology](#-technology)
+- [Repository Structure](#-repository-structure)
 
-Add, edit, delete and reorder questions in the question manager.
+---
 
-Export the question bank as a JSON file.
+## 🎯 Overview
 
-Switch between Quiz Master and audience views and use full-screen mode.
+QRIOUS Quiz Control Centre is a single-file web application for managing an inter-house quiz.
 
-Save the question bank, scores and event state in the browser's local storage.
+It allows the operator to:
 
-Manually announce which house buzzed first.
+1. Prepare and organise questions.
+2. Display questions to participants and the audience.
+3. Run a countdown timer.
+4. Reveal answers at the right moment.
+5. Record scores for each house.
+6. Review round-wise scores and final results.
 
-Requirements
+The initial question bank contains **editable placeholder questions for seven rounds**.
 
-A modern browser such as Chrome or Microsoft Edge.
+---
 
-A computer connected to the projector and speakers for the event.
+## ✨ Features
 
-JavaScript and local storage enabled in the browser.
+### 📝 Question management
 
-The app is a standalone HTML file. It does not require a server, database, installation or internet connection after the file has been downloaded. The school emblem is embedded in the HTML.
+- Add, edit and delete questions.
+- Arrange questions using the up and down controls.
+- Set the round and time for each question.
+- Display a question and reveal or hide its answer.
+- Export the question bank as a JSON file.
 
-Run locally
+### ⏱️ Countdown timer
 
-Download the HTML file from this repository.
+- Start, pause and reset the timer.
+- Set the time in seconds.
+- Display **TIME UP** when the countdown ends.
+- Play an alert sound when time is up.
 
-Open quiz-control-centre-updated (5).html in Chrome or Edge. If you rename it to index.html, open that file instead.
+### 🏠 House scoring
 
-Use the controls on the right to prepare the quiz.
+- Keep scores for all four houses.
+- Display current-round and overall totals.
+- Set the points awarded for correct and wrong answers.
+- Undo the most recent score change.
+- View a round-by-round score table and final results.
 
-For GitHub Pages, place the HTML file in the repository root as index.html, enable Pages in the repository settings, and select the branch and root folder containing that file. The site will use the published URL shown in the Pages settings.
+### 🎮 Quiz controls
 
-Preparing the quiz
+- Move to the previous or next question.
+- Jump to the next round.
+- Switch between Quiz Master and audience views.
+- Use full-screen mode for projection.
+- Announce the first house to buzz using manual controls.
 
-Click Edit / import questions in the Question bank section.
+### 💾 Local storage
 
-Replace the placeholder text with your questions and answers. Set the round and time for each question.
+- Save the question bank, scores and event state in the browser.
+- Reopen the application in the same browser profile to access its locally saved data.
 
-Use Add question, Delete, and the up/down buttons to organise the list. Keep questions for the same round together so Next round jumps to the expected place.
+---
 
-Click Save questions and confirm the replacement. Saving a changed question bank resets existing event scores, so finish preparing before the competition.
+## 🏠 Default Houses
 
-Click Export quiz JSON to download a copy of the questions. This export contains the question bank, not the score history. The current visual editor does not provide a JSON file import button.
+| House | Name |
+|:---:|---|
+| 🔥 | Agni |
+| 💧 | Jal |
+| 🌍 | Prithvi |
+| 🌬️ | Vayu |
 
-Running the event
+---
 
-Connect the projector and speakers. Open the app in the browser and check the sound.
+## 🚀 Getting Started
 
-Use Previous, Next, or Next round to select a question.
+### Requirements
 
-Check the time in the seconds field and click Start timer. Click it again to pause, or use Reset timer to set it back.
+- A modern browser such as **Google Chrome** or **Microsoft Edge**.
+- JavaScript and browser local storage enabled.
+- A computer connected to a projector or display for the audience.
+- Speakers connected to the computer for the timer alert.
 
-At zero, the app displays TIME UP and plays a sound. The question remains on screen until you move on.
+### Run the application
 
-Click Reveal answer when you are ready to show or hide the answer.
+1. Download the application HTML file from this repository.
+2. Open:
 
-Set the Correct and Wrong values as needed, then use the house buttons to update the score. Defaults are +10 and −5. Scores are applied manually; change the correct value to 5 for a five-point round.
+   ```text
+   quiz-control-centre-updated (5).html
+   ```
 
-Use Undo score if you make a scoring mistake. Select Final results when the competition ends.
+3. The application will open in your browser.
+4. Use the controls to prepare and conduct the quiz.
 
-Use Audience view to hide the control panel and Quiz master view to bring it back. The audience sees the same browser window, so return to Quiz Master view whenever you need to operate the controls. Full screen expands the page.
+You may rename the application file to `index.html` if you prefer a shorter filename or want to publish it using GitHub Pages.
 
-Buzzer note
+> **Offline use:** Once the HTML file has been downloaded, the application can run without an internet connection.
 
-The Manual buzzer result buttons let an operator announce a house on screen. This HTML file does not receive live buzzer presses from team phones or synchronise devices over Wi-Fi. A separate networked buzzer application would be needed for that workflow.
+---
 
-Data and practical notes
+## 🛠️ Preparing the Quiz
 
-Data is stored locally in the browser, on the same computer and browser profile. It is not shared across devices or backed up to GitHub.
+Complete these steps before the competition begins.
 
-Clearing site/browser data, using a different browser profile or switching from a local file to a hosted site can leave saved data unavailable. Export questions before the event and keep a separate written score backup.
+### 1. Open the question editor
 
-Reset event clears scores and returns to the first question while retaining the question bank. Confirm carefully before resetting.
+In the **Question bank** section, click:
 
-Audio depends on browser permissions, system volume and the selected speaker output. Test on the actual auditorium setup.
+```text
+Edit / import questions
+```
 
-The displayed final ranking orders teams by score; handle tied scores according to your competition rules.
+### 2. Replace the placeholders
 
-Technology
+Enter your own:
 
-Built with HTML, CSS and vanilla JavaScript, using browser local storage and the Web Audio API. All app code is contained in the HTML file.
+- Questions
+- Answers
+- Round details
+- Time limits
 
-Repository contents
+### 3. Organise the question order
 
-README.md
-quiz-control-centre-updated (5).html  # Application (rename to index.html for Pag
+Use the available controls to:
+
+- Add a question.
+- Delete a question.
+- Move a question up or down.
+
+Keep questions from the same round together so that **Next round** jumps to the expected place.
+
+### 4. Save the question bank
+
+Click **Save questions** and confirm the replacement.
+
+> ⚠️ **Important:** Saving a changed question bank resets existing event scores. Prepare and save the questions before the competition starts.
+
+### 5. Export a backup
+
+Click **Export quiz JSON** to download a copy of the question bank.
+
+> The JSON export contains the question bank, not the score history. The current visual editor does not provide a JSON file import button.
+
+---
+
+## 🎤 Conducting the Competition
+
+### Step 1: Set up the venue
+
+1. Connect the computer to the projector or display.
+2. Connect the speakers.
+3. Open the application.
+4. Check that the questions, answers and rounds are in the correct order.
+5. Test the timer sound and volume.
+
+### Step 2: Display a question
+
+Use:
+
+- **Previous** to return to the previous question.
+- **Next** to move to the next question.
+- **Next round** to jump to the next round.
+
+### Step 3: Start the timer
+
+1. Check the time in the seconds field.
+2. Click **Start timer**.
+3. Click the timer control again to pause it if necessary.
+4. Use **Reset timer** to set it back.
+
+When the timer reaches zero:
+
+- **TIME UP** appears.
+- An alert sound plays.
+- The question remains on screen until the operator moves on.
+
+### Step 4: Reveal the answer
+
+Click **Reveal answer** when the Quiz Master is ready. Use the control again to hide the answer.
+
+### Step 5: Update the scores
+
+Set the appropriate values for **Correct** and **Wrong**, then use the house scoring buttons to apply the result.
+
+### Step 6: Show the final results
+
+After the last round, select **Final results** to display the standings.
+
+---
+
+## 🧮 Scoring Guide
+
+Scoring is controlled manually by the operator.
+
+The default values are:
+
+| Result | Default score |
+|---|---:|
+| Correct answer | +10 |
+| Wrong answer | −5 |
+
+You can change the values to match the rules of each round.
+
+### Example: A five-point round
+
+If a correct answer is worth five points:
+
+1. Change the **Correct** value to `5`.
+2. Select the appropriate house scoring button when an answer is correct.
+3. Adjust the **Wrong** value according to your competition rules.
+
+### Correcting a mistake
+
+If the wrong score is entered, use **Undo score** to reverse the most recent score change.
+
+> Final rankings are ordered by score. Decide and announce your competition’s tie-breaking rules separately.
+
+---
+
+## 🖥️ Audience and Quiz Master Views
+
+### Quiz Master view
+
+Use this view to operate the quiz, including:
+
+- Selecting questions and rounds.
+- Starting or resetting the timer.
+- Revealing answers.
+- Updating scores.
+- Managing the question bank.
+
+### Audience view
+
+Use **Audience view** to hide the control panel while displaying the quiz to participants and the audience.
+
+Click **Quiz master view** to bring the controls back.
+
+> Both views use the same browser window. When you return to Quiz Master view, the controls will also be visible on the projected display.
+
+Use **Full screen** to expand the page for the event.
+
+---
+
+## 🔔 Manual Buzzer
+
+The **Manual buzzer result** controls allow the operator to announce which house buzzed first.
+
+This application does **not** receive live buzzer presses from team phones or synchronise devices over Wi-Fi. A separate networked buzzer system would be required for that setup.
+
+---
+
+## 💾 Saving and Backup
+
+### How data is stored
+
+The application stores the question bank, scores and event state in the browser’s **local storage**.
+
+The saved data belongs to the browser and profile being used. It is not automatically:
+
+- Shared with another computer.
+- Synchronised between browsers.
+- Backed up to GitHub.
+
+### Recommended event backup
+
+Before the event:
+
+1. Export the question bank as JSON.
+2. Keep a separate copy of the HTML file.
+3. Test the application on the actual event computer.
+
+During the event:
+
+1. Keep a written or separate score backup.
+2. Avoid clearing browser data.
+3. Avoid changing the browser or browser profile.
+
+> Switching from a local HTML file to a hosted website may make previously saved data unavailable because the browser treats them as different locations.
+
+### Resetting the event
+
+**Reset event** clears scores and returns to the first question while retaining the question bank.
+
+Use it carefully and confirm the action only when you are ready to reset the competition.
+
+---
+
+## 🌐 Deploying with GitHub Pages
+
+GitHub Pages can make the application accessible through a web link.
+
+### Step 1: Rename the application file
+
+Rename:
+
+```text
+quiz-control-centre-updated (5).html
+```
+
+to:
+
+```text
+index.html
+```
+
+### Step 2: Place the files in your repository
+
+Your repository should contain:
+
+```text
+your-repository/
+├── index.html
+└── README.md
+```
+
+### Step 3: Enable GitHub Pages
+
+1. Open your repository on GitHub.
+2. Go to **Settings**.
+3. Select **Pages**.
+4. Under **Build and deployment**, choose **Deploy from a branch**.
+5. Select the branch containing `index.html`, commonly `main`.
+6. Select the root folder.
+7. Click **Save**.
+
+GitHub will display the published website address in the Pages settings once the site is available.
+
+> The hosted application still stores data locally in each visitor’s browser. Publishing it does not create a shared online scoreboard.
+
+---
+
+## 🩺 Troubleshooting
+
+### The timer sound is not playing
+
+- Check the computer’s volume.
+- Confirm that the correct speaker output is selected.
+- Check browser audio permissions.
+- Test the sound after interacting with the page.
+- Test the complete setup on the event computer before the competition.
+
+### My questions or scores are missing
+
+- Make sure you are using the same computer, browser and browser profile.
+- Check whether browser data was cleared.
+- Check whether you switched from the local file to the hosted version, or vice versa.
+- Refer to your exported question bank and separate score backup.
+
+### The next round is not opening where expected
+
+Keep questions from each round together in the question editor, then save the question bank before starting the event.
+
+> Saving a changed question bank resets existing scores.
+
+### The audience can see the controls
+
+Select **Audience view** to hide the control panel. Remember that switching back to Quiz Master view will show the controls in the same projected browser window.
+
+### The scoreboard is not updating on another computer
+
+Scores are stored locally in the browser. Separate computers do not automatically share or synchronise event data.
+
+---
+
+## 💻 Technology
+
+| Technology | Purpose |
+|---|---|
+| HTML | Application structure |
+| CSS | Layout and visual design |
+| Vanilla JavaScript | Quiz controls and scoring |
+| Browser local storage | Local saving of quiz and event data |
+| Web Audio API | Timer alert sound |
+
+The school emblem and application code are embedded in the standalone HTML file.
+
+---
+
+## 📁 Repository Structure
+
+```text
+your-repository/
+├── README.md
+└── quiz-control-centre-updated (5).html
+```
+
+For GitHub Pages, the application file can be renamed:
+
+```text
+your-repository/
+├── README.md
+└── index.html
+```
+
+---
+
+<p align="center">
+  <strong>VIRAJ INTERNATIONAL SCHOOL</strong><br>
+  QRIOUS • Inter-House Quiz Competition
+</p>
+````
